@@ -1,0 +1,43 @@
+# Python-specific
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.db
+*.sqlite3
+*.env
+*.venv
+
+# IDEs and editors
+.vscode/
+.idea/
+*.suo
+*.user
+*.swp
+*.swo
+*.sublime-workspace
+*.sublime-project
+
+# Environment variables
+.env
+
+# Logs
+*.log
+
+# Operating system-specific files
+.DS_Store
+Thumbs.db
+
+# Virtual environment directories
+venv/
+.env/
+
+# System files
+*.lock
+*.pid
+
+# Sensitive information
+config.py
+
+# Jupyter Notebook
+.ipynb_checkpoints/

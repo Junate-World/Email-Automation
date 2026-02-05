@@ -4,12 +4,13 @@ import time
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from socket import gaierror
+import os
 
 # Email configuration
-SMTP_SERVER = 'smtp.gmail.com'  # Replace with your SMTP server. Gmail(stmp.gmail.com), yahoomail(smtp.mail.yahoomail.com)
-SMTP_PORT = 587                   # Common port for 587 TLS, 465 SSL
-USERNAME = 'abel.ogbonna26@gmail.com'  # Replace with your email address
-PASSWORD = 'yrgpyhbydvejnqtx'  # Replace with your email password. for gmail users, generate app  password and ensure to turn on 2-step verification.
+SMTP_SERVER = os.environ.get('SMTP_SERVER')  # Replace with your SMTP server. Gmail(stmp.gmail.com), yahoomail(smtp.mail.yahoomail.com)
+SMTP_PORT = os.environ.get('SMTP_PORT')                # Common port for 587 TLS, 465 SSL
+USERNAME = os.environ.get('USERNAME')  # Replace with your email address
+PASSWORD = os.environ.get('PASSWORD')  # Replace with your email password. for gmail users, generate app  password and ensure to turn on 2-step verification.
 
 # Email content
 def create_email_content():

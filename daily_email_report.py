@@ -6,10 +6,10 @@ from email.mime.text import MIMEText
 from socket import gaierror
 
 # Email configuration
-SMTP_SERVER = 'smtp.mail.com'  # Replace with your SMTP server. Gmail(stmp.gmail.com), yahoomail(smtp.mail.yahoomail.com)
+SMTP_SERVER = 'smtp.gmail.com'  # Replace with your SMTP server. Gmail(stmp.gmail.com), yahoomail(smtp.mail.yahoomail.com)
 SMTP_PORT = 587                   # Common port for 587 TLS, 465 SSL
-USERNAME = 'recipient@example.com'  # Replace with your email address
-PASSWORD = 'password'  # Replace with your email password. for gmail users, generate app  password and ensure to turn on 2-step verification.
+USERNAME = 'abel.ogbonna26@gmail.com'  # Replace with your email address
+PASSWORD = 'yrgpyhbydvejnqtx'  # Replace with your email password. for gmail users, generate app  password and ensure to turn on 2-step verification.
 
 # Email content
 def create_email_content():
@@ -43,11 +43,11 @@ def send_email(subject, body, to_email):
 # Define the task
 def send_daily_report():
     subject, body = create_email_content()
-    recipient = 'recipient@example.com'  # Replace with the recipient's email address
+    recipient = 'abel.ogbonna26@gmail.com'  # Replace with the recipient's email address
     send_email(subject, body, recipient)
 
 # Schedule the task
-schedule.every().day.at("09:00").do(send_daily_report)  # Set the time for sending the email
+schedule.every().day.at("01:37").do(send_daily_report)  # Set the time for sending the email
 
 # Keep the script running
 if __name__ == "__main__":
